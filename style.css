@@ -1,0 +1,131 @@
+/* Основные стили для страницы */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5); /* Градиентный фон */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    animation: background-animation 15s infinite alternate; /* Анимация фона */
+}
+
+/* Анимация для фона */
+@keyframes background-animation {
+    0% {
+        background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    }
+    100% {
+        background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    }
+}
+
+/* Контейнер для содержимого */
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.05); /* Эффект увеличения контейнера при наведении */
+}
+
+/* Заголовок */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Анимация для заголовка */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Ввод города */
+input[type="text"] {
+    padding: 15px;
+    font-size: 1.2rem;
+    width: 80%;
+    margin-bottom: 20px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #2ecc71;
+    box-shadow: 0 0 8px rgba(46, 204, 113, 0.6);
+}
+
+/* Кнопка поиска */
+button {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.1); /* Кнопка увеличивается при наведении */
+}
+
+/* Блок с информацией о погоде */
+.weather-info {
+    margin-top: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.weather-info h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #2980b9;
+}
+
+.weather-info p {
+    font-size: 1.5rem;
+    margin: 5px 0;
+}
+
+/* Анимация загрузки */
+.loading {
+    font-size: 1.5rem;
+    color: #f39c12;
+    font-weight: bold;
+    animation: bounce 1s infinite; /* Анимация для текста загрузки */
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
